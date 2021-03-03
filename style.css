@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+body button{
+    border: none;
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 5px;
+    outline: none;
+}
+
+body button:hover{
+    cursor: pointer;
+}
+
+body .content{
+    width: 335px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body .content .input{
+    overflow: hidden;
+    width: 100%;
+    padding: 10px 0px;
+    background-color: transparent;
+    color: white;
+    font-size: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+body .content .left{
+    width: 255px;
+}
+
+body .content .left .top, body .content .left .number{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body .content .left button{
+    margin-right: 5px;
+}
+
+body .content .left .top button{
+    background-color: rgb(165, 165, 165);
+    color: black;
+}
+
+body .content .left .number button{
+    background-color: rgb(55, 55, 55);
+}
+
+body .content .left .number .zero{
+    width:165px;
+    border-radius: 40px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+body .content .right{
+    width: 80px;
+}
+
+body .content .right button{
+    background-color: rgb(254, 158, 12);
+}
+
+
+/* respons */
+
+@media screen and (max-width:340px){
+    body .content{
+        width: 260px;
+    }
+
+    body .content .left{
+        width: 200px;
+    }
+
+    body button{
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+    }
+
+    body .content .left .number .zero{
+        width: 125px;
+        padding-left: 22px;
+    }
+
+    body .content .right{
+        width: 60px;
+    }
+}
