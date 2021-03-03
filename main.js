@@ -43,9 +43,13 @@ numberButton.click(function(){
     number += text;
     input.text(number);
 
-    if(sum.slice(-1) == "/" || sum.slice(-1) == "*" || sum.slice(-1) == "+" || sum.slice(-1) == "-" || sum == "" ){
-        sum += number;
+    if(sum.includes("/") || sum.includes("*") || sum.includes("+") || sum.includes("-") || sum == "" ){
+        if(number.length > 1){
+            sum += number.slice(number.length-1, number.length);
+        }else{
+            sum += number;
         }
+    }
     else{
         symbols.css('background-color', 'rgb(254, 158, 12)');
         sum = "";
@@ -116,8 +120,6 @@ symbols.click(function(){
     }}
 
     number = "";
-    console.log(sum);
-    console.log(result);
 })
 
 //calculator logic
